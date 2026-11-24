@@ -1,0 +1,415 @@
+/* ===== Vibrant & Warm Color Palette ===== */
+:root {
+  --green-deep: #006633;
+  --green-bright: #009944;
+  --gold: #facc15;
+  --sunset-orange: #ff9f1c;
+  --rose-warm: #e63946;
+  --sky-calm: #219ebc;
+  --lavender-soft: #9b7fc9;
+  --cream: #fffbeb;
+  --white: #ffffff;
+  --text-dark: #1f2937;
+  --text-soft: #4b5563;
+  --shadow-soft: 0 6px 20px rgba(0,0,0,0.08);
+  --shadow-glow: 0 10px 30px rgba(0, 102, 51, 0.15);
+  --radius: 20px;
+  --radius-sm: 12px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Roboto, 'Trebuchet MS', sans-serif;
+}
+
+body {
+  background: linear-gradient(180deg, #fffdf6, #f0fff4, #f0f9ff);
+  color: var(--text-dark);
+  line-height: 1.7;
+}
+
+/* ===== Top Navigation ===== */
+.top-nav {
+  background: linear-gradient(90deg, var(--green-deep), var(--green-bright));
+  padding: 0.9rem 1.5rem;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 4px 15px rgba(0, 102, 51, 0.25);
+}
+
+.nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.logo-wrap {
+  display: flex;
+  gap: 0.6rem;
+  align-items: center;
+}
+
+.site-logo {
+  height: 48px;
+  width: auto;
+  border-radius: 50%;
+  background: white;
+  padding: 0.25rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.page-title {
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 800;
+}
+
+.nav-links {
+  display: flex;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem 0.9rem;
+  border-radius: 25px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  background: rgba(255,255,255,0.25);
+  transform: translateY(-2px);
+}
+
+/* ===== Hero Section ===== */
+.hero {
+  position: relative;
+  background: linear-gradient(135deg, rgba(0,102,51,0.95), rgba(250,204,21,0.9));
+  padding: 3.5rem 2rem;
+  text-align: center;
+  overflow: hidden;
+}
+
+.hero-gradient {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at top, rgba(255,255,255,0.25), transparent 60%);
+  pointer-events: none;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 850px;
+  margin: 0 auto;
+}
+
+.hero-heading {
+  color: white;
+  font-size: 2.2rem;
+  font-weight: 900;
+  margin-bottom: 1rem;
+  text-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.hero-tagline {
+  color: #fffbeb;
+  font-size: 1.1rem;
+  margin-bottom: 0.8rem;
+}
+
+.hero-quote {
+  color: white;
+  font-style: italic;
+  opacity: 0.95;
+  font-size: 1rem;
+}
+
+/* ===== Welcome Section ===== */
+.welcome-section {
+  max-width: 900px;
+  margin: -2rem auto 2.5rem;
+  padding: 0 1.5rem;
+  position: relative;
+  z-index: 5;
+}
+
+.welcome-card {
+  background: white;
+  padding: 2rem;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-glow);
+  border-left: 6px solid var(--gold);
+}
+
+.welcome-title {
+  color: var(--green-deep);
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.welcome-text {
+  font-size: 1.05rem;
+  color: var(--text-dark);
+}
+
+/* ===== Values Section ===== */
+.values-section {
+  max-width: 1100px;
+  margin: 0 auto 3.5rem;
+  padding: 0 1.5rem;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 1.8rem;
+  color: var(--green-deep);
+  margin-bottom: 0.5rem;
+}
+
+.section-subtitle {
+  text-align: center;
+  color: var(--text-soft);
+  margin-bottom: 2rem;
+}
+
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.value-card {
+  background: white;
+  padding: 1.8rem;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-soft);
+  border-top: 5px solid;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.value-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.12);
+}
+
+.v-icon {
+  font-size: 2rem;
+  display: block;
+  margin-bottom: 0.6rem;
+}
+
+.value-card h4 {
+  font-size: 1.15rem;
+  margin-bottom: 0.6rem;
+}
+
+.value-card p {
+  color: var(--text-soft);
+  margin-bottom: 0.5rem;
+}
+
+.v-saying {
+  font-style: italic;
+  font-weight: 600;
+  font-size: 0.9rem;
+  padding-top: 0.5rem;
+  border-top: 1px dashed #e5e5e5;
+}
+
+/* Card Colors */
+.v-1 { border-color: var(--gold); }
+.v-1 h4 { color: #b45309; }
+.v-1 .v-saying { color: #b45309; }
+
+.v-2 { border-color: var(--rose-warm); }
+.v-2 h4 { color: var(--rose-warm); }
+.v-2 .v-saying { color: var(--rose-warm); }
+
+.v-3 { border-color: var(--sky-calm); }
+.v-3 h4 { color: var(--sky-calm); }
+.v-3 .v-saying { color: var(--sky-calm); }
+
+.v-4 { border-color: var(--green-bright); }
+.v-4 h4 { color: var(--green-deep); }
+.v-4 .v-saying { color: var(--green-deep); }
+
+.v-5 { border-color: var(--sunset-orange); }
+.v-5 h4 { color: #d97706; }
+.v-5 .v-saying { color: #d97706; }
+
+.v-6 { border-color: var(--lavender-soft); }
+.v-6 h4 { color: #7c3aed; }
+.v-6 .v-saying { color: #7c3aed; }
+
+/* ===== Gallery Section ===== */
+.gallery-section {
+  max-width: 1000px;
+  margin: 0 auto 3.5rem;
+  padding: 0 1.5rem;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+}
+
+.gallery-card {
+  background: white;
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow-glow);
+  transition: transform 0.3s ease;
+}
+
+.gallery-card:hover {
+  transform: scale(1.03);
+}
+
+.gallery-card img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+}
+
+.caption {
+  padding: 1rem;
+  text-align: center;
+  font-weight: 700;
+  color: var(--green-deep);
+  font-size: 1rem;
+}
+
+/* ===== Message Section ===== */
+.message-section {
+  max-width: 900px;
+  margin: 0 auto 3.5rem;
+  padding: 0 1.5rem;
+}
+
+.message-card {
+  background: white;
+  padding: 2.5rem;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-glow);
+  background-image: linear-gradient(135deg, rgba(250,204,21,0.1), rgba(0,102,51,0.05));
+}
+
+.message-text {
+  margin-bottom: 1.2rem;
+  font-size: 1.05rem;
+}
+
+.message-highlight {
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: var(--green-deep);
+  padding: 1.5rem;
+  background: rgba(250,204,21,0.15);
+  border-radius: var(--radius-sm);
+  text-align: center;
+  margin: 1.5rem 0;
+  border-left: 4px solid var(--gold);
+}
+
+.message-sign {
+  text-align: right;
+  font-weight: 700;
+  color: var(--green-deep);
+  font-style: italic;
+}
+
+/* ===== Pledge Section ===== */
+.pledge-section {
+  max-width: 900px;
+  margin: 0 auto 3.5rem;
+  padding: 0 1.5rem;
+}
+
+.pledge-card {
+  background: white;
+  padding: 2.5rem;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-glow);
+  border: 3px solid var(--gold);
+}
+
+.pledge-list {
+  list-style: none;
+  margin-bottom: 1.5rem;
+}
+
+.pledge-list li {
+  padding: 0.9rem 0;
+  border-bottom: 1px dashed #e5e5e5;
+  font-size: 1.05rem;
+  color: var(--text-dark);
+}
+
+.pledge-list li:last-child {
+  border-bottom: none;
+}
+
+.pledge-ending {
+  text-align: center;
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: var(--green-deep);
+  padding-top: 1rem;
+}
+
+/* ===== Footer ===== */
+.page-footer {
+  background: var(--green-deep);
+  color: white;
+  text-align: center;
+  padding: 2.5rem 2rem;
+}
+
+.footer-logos {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.f-logo {
+  height: 50px;
+  width: auto;
+  border-radius: 50%;
+  background: white;
+  padding: 0.3rem;
+}
+
+.footer-text {
+  margin-bottom: 0.5rem;
+  font-size: 0.95rem;
+}
+
+.footer-motto {
+  font-style: italic;
+  opacity: 0.9;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+  .nav-container {
+    flex-direction: column;
+    text-align: center;
+  }
+  .hero-heading {
+    font-size: 1.7rem;
+  }

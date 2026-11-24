@@ -1,0 +1,328 @@
+/* ===== Color Palette — Warm, Faithful & Vibrant ===== */
+:root {
+  --deep-green: #006633;
+  --gold-yellow: #ffcc00;
+  --sunset-orange: #ff7a30;
+  --soft-peach: #fff7ed;
+  --cream: #fffbeb;
+  --sky-blue: #3b82f6;
+  --lavender: #8b5cf6;
+  --rose-pink: #ec4899;
+  --text-dark: #1f2937;
+  --text-light: #4b5563;
+  --white: #ffffff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Roboto, 'Trebuchet MS', sans-serif;
+}
+
+body {
+  background: linear-gradient(180deg, #f0fdf4, #fffbeb, #fef3c7);
+  color: var(--text-dark);
+  line-height: 1.7;
+  min-height: 100vh;
+}
+
+/* ===== Top Navigation ===== */
+.top-nav {
+  background: linear-gradient(90deg, var(--deep-green), #22c55e);
+  padding: 0.8rem 1.5rem;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 4px 15px rgba(0, 102, 51, 0.25);
+}
+
+.nav-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.logo {
+  color: white;
+  font-size: 1.4rem;
+  font-weight: 800;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.nav-links {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  padding: 0.6rem 1rem;
+  border-radius: 25px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  background: rgba(255, 255, 255, 0.25);
+  transform: translateY(-2px);
+}
+
+/* ===== Hero Section ===== */
+.hero-section {
+  position: relative;
+  background: linear-gradient(135deg, rgba(0,102,51,0.92), rgba(255,122,48,0.85)),
+              url('tcgc-seal.png') center/contain no-repeat;
+  padding: 3rem 1.5rem;
+  text-align: center;
+  overflow: hidden;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at top, rgba(255,204,0,0.3), transparent 60%);
+  pointer-events: none;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.seal-icon {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background: white;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 4px 15px rgba(255,204,0,0.4);
+}
+
+.hero-title {
+  color: white;
+  font-size: 2.2rem;
+  font-weight: 800;
+  margin-bottom: 0.8rem;
+  text-shadow: 0 3px 6px rgba(0,0,0,0.2);
+}
+
+.hero-subtitle {
+  color: #fff9e6;
+  font-size: 1.1rem;
+  font-style: italic;
+}
+
+/* ===== Intro Section ===== */
+.intro-section {
+  max-width: 900px;
+  margin: -2rem auto 2rem;
+  padding: 0 1rem;
+  position: relative;
+  z-index: 5;
+}
+
+.intro-card {
+  background: white;
+  border-radius: 24px;
+  padding: 2rem;
+  box-shadow: 0 10px 30px rgba(0, 102, 51, 0.15);
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  border: 4px solid transparent;
+  background-image: linear-gradient(white, white),
+                    linear-gradient(135deg, var(--deep-green), var(--gold-yellow), var(--sunset-orange));
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+}
+
+.personal-photo {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid var(--gold-yellow);
+  box-shadow: 0 6px 20px rgba(255,122,48,0.3);
+}
+
+.intro-text {
+  flex: 1;
+  min-width: 280px;
+}
+
+.intro-text h2 {
+  font-size: 1.8rem;
+  color: var(--deep-green);
+  margin-bottom: 0.5rem;
+}
+
+.name-highlight {
+  background: linear-gradient(90deg, var(--deep-green), var(--sunset-orange));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.intro-line {
+  color: var(--text-light);
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.motto-quote {
+  font-style: italic;
+  color: var(--sunset-orange);
+  font-size: 1.05rem;
+  border-left: 4px solid var(--gold-yellow);
+  padding-left: 1rem;
+}
+
+/* ===== Reflection Cards Grid ===== */
+.reflection-grid {
+  max-width: 1000px;
+  margin: 0 auto 3rem;
+  padding: 0 1.2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+  gap: 1.8rem;
+}
+
+.reflection-card {
+  background: white;
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.reflection-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+}
+
+.card-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.reflection-card h3 {
+  font-size: 1.35rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0.6rem;
+  border-bottom: 2px solid;
+}
+
+.reflection-card p {
+  color: var(--text-light);
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+
+.verse {
+  font-style: italic;
+  font-weight: 600;
+  margin-top: 0.5rem;
+}
+
+/* Card Color Themes */
+.faith-card {
+  border-top: 5px solid var(--deep-green);
+}
+.faith-card h3 {
+  color: var(--deep-green);
+  border-color: var(--deep-green);
+}
+.faith-card .verse {
+  color: var(--deep-green);
+}
+
+.integrity-card {
+  border-top: 5px solid var(--gold-yellow);
+}
+.integrity-card h3 {
+  color: #b45309;
+  border-color: var(--gold-yellow);
+}
+.integrity-card .verse {
+  color: #b45309;
+}
+
+.digital-card {
+  border-top: 5px solid var(--sky-blue);
+}
+.digital-card h3 {
+  color: var(--sky-blue);
+  border-color: var(--sky-blue);
+}
+.digital-card .verse {
+  color: var(--sky-blue);
+}
+
+.closing-card {
+  border-top: 5px solid var(--lavender);
+  grid-column: 1 / -1;
+  background: linear-gradient(135deg, #faf5ff, #fffbeb);
+}
+.closing-card h3 {
+  color: var(--lavender);
+  border-color: var(--lavender);
+  text-align: center;
+}
+.closing-card p {
+  text-align: center;
+  font-size: 1.05rem;
+}
+.closing-motto {
+  text-align: center;
+  font-weight: 700;
+  color: var(--lavender);
+  font-size: 1.1rem;
+  margin-top: 1rem;
+}
+
+/* ===== Footer ===== */
+.page-footer {
+  text-align: center;
+  padding: 2.5rem;
+  background: white;
+  border-top: 4px solid var(--gold-yellow);
+  color: var(--text-light);
+}
+
+.footer-motto {
+  margin-top: 0.5rem;
+  font-weight: 600;
+  color: var(--deep-green);
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+  .intro-card {
+    flex-direction: column;
+    text-align: center;
+  }
+  .motto-quote {
+    border-left: none;
+    border-top: 3px solid var(--gold-yellow);
+    padding-left: 0;
+    padding-top: 1rem;
+  }
+  .reflection-grid {
+    grid-template-columns: 1fr;
+  }
+  .hero-title {
+    font-size: 1.7rem;
+  }
+}
